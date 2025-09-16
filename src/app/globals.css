@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  color: #fff;
+  background: #1a1a2e;
+  overflow-x: hidden;
+}
+
+/* App container with smooth background */
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease-in-out;
+  padding: 1rem;
+}
+
+/* Dynamic backgrounds */
+.app.sunny {
+  background: linear-gradient(to bottom, #fddb92, #d1fdff);
+}
+
+.app.cloudy {
+  background: linear-gradient(to bottom, #757f9a, #d7dde8);
+}
+
+.app.rainy {
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+}
+
+.app.snowy {
+  background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+}
+
+.app.stormy {
+  background: linear-gradient(to bottom, #232526, #414345);
+}
+
+.app.default {
+  background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+}
+
+/* Glassy search box */
+.search {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.7s ease;
+}
+
+.search h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+.search input {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: 2px solid black;
+  outline: none;
+  margin-right: 1rem;
+  width: 220px;
+}
+
+.search button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg, #c1bb0b, #dd2476);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Weather info card */
+.container {
+  max-width: 420px;
+  width: 100%;
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeInUp 0.6s ease;
+}
+
+.top h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #ffeb3b;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .search input {
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+  .search button {
+    width: 100%;
+  }
+}
+
+.weather-icon {
+  width: 120px;
+  height: 120px;
+  margin: 1rem auto;
+  display: block;
+  animation: pop 0.6s ease;
+}
+
+.error {
+  color: #ff4b5c;
+  font-weight: 600;
+  margin-top: 1rem;
+  background: rgba(255, 75, 92, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* Forecast Section */
+.forecast {
+  margin-top: 2rem;
+  text-align: center;
+  animation: fadeInUp 0.7s ease;
+}
+
+.forecast h3 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: black;
+}
+
+.forecast-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+  border-radius: 16px;
+  width: 150px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.forecast-card img {
+  width: 80px;
+  height: 80px;
+}
+
+.forecast-temp {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+.forecast-desc {
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  margin-top: 0.3rem;
+}
+
