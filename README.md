@@ -8,7 +8,7 @@ It allows users to search for any city and view the **current weather conditions
 ## 🚀 Features
 - 🔍 **City Search** – Search for any city worldwide.  
 - 🌡️ **Current Weather** – Temperature, weather description, humidity, wind speed.  
-- 📅 **5-Day Forecast** – View upcoming weather conditions.  
+- 📅 **3-Day Forecast** – View upcoming weather conditions.  
 - 📱 **Responsive Design** – Works on desktop, tablet, and mobile.  
 - ⚡ Built with **Next.js** for fast rendering.  
 
