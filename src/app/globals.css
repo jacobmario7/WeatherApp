@@ -14,7 +14,6 @@ body {
   overflow-x: hidden;
 }
 
-/* App container with smooth background */
 .app {
   width: 100vw;
   min-height: 100vh;
@@ -26,7 +25,6 @@ body {
   padding: 1rem;
 }
 
-/* Dynamic backgrounds */
 .app.sunny {
   background: linear-gradient(to bottom, #fddb92, #d1fdff);
 }
@@ -51,7 +49,6 @@ body {
   background: linear-gradient(to bottom, #4e54c8, #8f94fb);
 }
 
-/* Glassy search box */
 .search {
   background: rgba(255,255,255,0.15);
   box-shadow: 0 8px 32px rgba(31,38,135,0.37);
@@ -98,7 +95,6 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-/* Weather info card */
 .container {
   max-width: 420px;
   width: 100%;
@@ -132,7 +128,6 @@ body {
   text-transform: capitalize;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
@@ -170,7 +165,6 @@ body {
   border-radius: 8px;
 }
 
-/* Forecast Section */
 .forecast {
   margin-top: 2rem;
   text-align: center;
