@@ -1,7 +1,7 @@
 # 🌦️ Weather App
 
 A simple and responsive weather application built with **Next.js**.  
-It allows users to search for any city and view the **current weather conditions** along with a **5-day forecast**.  
+It allows users to search for any city and view the **current weather conditions** along with a **3-day forecast**.  
 
 ---
 
